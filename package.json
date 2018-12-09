@@ -1,0 +1,27 @@
+{
+  "name": "nhp",
+  "version": "0.0.1",
+  "description": "Node Hypertext Preprocessor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdodov/nhp.git"
+  },
+  "keywords": [
+    "node",
+    "hypertext",
+    "preprocessor"
+  ],
+  "author": "Hristiyan Dodov",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/hdodov/nhp/issues"
+  },
+  "homepage": "https://github.com/hdodov/nhp#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
