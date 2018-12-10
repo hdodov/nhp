@@ -1,13 +1,11 @@
 <div>
-    <h1>
-
     var prom = new Promise((resolve, reject) => {
         setTimeout(function () {
             resolve('working');
         }, 500);
     });
 
-    buffer += await prom;
+    <h1>${ await prom }</h1>
 
     <ul>
         for (var i = 0; i < 50; i++) {
@@ -15,5 +13,9 @@
         }
     </ul>
 
-    </h1>
+    <template>
+        foo bar
+        ${ 5 + 23 }
+        baz
+    </template>
 </div>
