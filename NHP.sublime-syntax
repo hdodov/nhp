@@ -1,0 +1,15 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions:
+  - nhp
+scope: source.nhp
+
+contexts:
+  main:
+    - match: ""
+      push: "Packages/JavaScript/JavaScript.sublime-syntax"
+      with_prototype: 
+        - match: "^\\s*(?=<)"
+          embed: "Packages/HTML/HTML.sublime-syntax"
+          escape: $

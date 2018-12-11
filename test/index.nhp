@@ -1,21 +1,32 @@
-<div>
-    var prom = new Promise((resolve, reject) => {
-        setTimeout(function () {
-            resolve('working');
-        }, 500);
-    });
+var ms = require('ms'); // comment
+/* testing */
 
-    <h1>${ await prom }</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NHP</title>
+</head>
+<body>
+    <div>
+        var prom = new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve('working');
+            }, 500);
+        });
 
-    <ul>
-        for (var i = 0; i < 50; i++) {
-            <li>${i}</li>
-        }
-    </ul>
+        <h1>${ await prom } ${ ms(Math.random() * 10e4) }</h1>
 
-    <template>
-        foo bar
-        ${ 5 + 23 }
-        baz
-    </template>
-</div>
+        <ul>
+            for (var i = 0; i < 50; i++) {
+                <li>${i}</li>
+            }
+        </ul>
+
+        <template>
+            for (var i = 0; i < 50; i++) {
+                console.log('5');
+            }
+        </template>
+    </div>
+</body>
+</html>
