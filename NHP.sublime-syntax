@@ -17,6 +17,6 @@ contexts:
 
   template:
     - meta_content_scope: text.nhp.basic
-    - include: "Packages/HTML/HTML.sublime-syntax"
-    - match: "</template>"
+    - match: "(?<=<\\/template>)"
       pop: true
+    - include: "Packages/HTML/HTML.sublime-syntax"
