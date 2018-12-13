@@ -1,5 +1,4 @@
-var ms = require('ms'); // comment
-/* testing */
+var ms = require('ms');
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +13,19 @@ var ms = require('ms'); // comment
             }, 500);
         });
 
+        buffer += 'test';
+
         <h1>${ await prom } ${ ms(Math.random() * 10e4) }</h1>
+
+        <h1 class="${ 'test' + 'foo' }">${ path }</h1>
+
+        <div>
+            <template>
+                foo
+                bar
+                baz
+            </template>
+        </div>
 
         <ul>
             for (var i = 0; i < 50; i++) {
