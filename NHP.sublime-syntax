@@ -1,6 +1,5 @@
 %YAML 1.2
 ---
-# See http://www.sublimetext.com/docs/3/syntax.html
 file_extensions:
   - nhp
 scope: source.nhp
@@ -10,6 +9,14 @@ contexts:
     - match: ""
       push: "Packages/JavaScript/JavaScript.sublime-syntax"
       with_prototype: 
+        - match: "^\\s*(?=<template>)"
+          push: template
         - match: "^\\s*(?=<)"
           embed: "Packages/HTML/HTML.sublime-syntax"
           escape: $
+
+  template:
+    - meta_content_scope: text.nhp.basic
+    - include: "Packages/HTML/HTML.sublime-syntax"
+    - match: "</template>"
+      pop: true
