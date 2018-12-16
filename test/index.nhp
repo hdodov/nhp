@@ -14,7 +14,17 @@ var foo = require('./foo');
         //     }, 500);
         // });
 
-        echo(arguments.query.test);
+        <h1>stara</h1>
+
+        var cnt = capture(() => {
+            <h1>${ arguments.query.test }</h1>
+        });
+
+        <pre>
+            <template>
+                ${ cnt.toUpperCase() }
+            </template>
+        </pre>
 
 
         await include('./mods/md.nhp', {
