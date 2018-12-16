@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"meta",
+				"meta_content_scope\tmeta_content_scope:"
+			],
+			[
+				"me",
+				"meta_content_scope\tmeta_content_scope:"
+			],
+			[
 				"DATE",
 				"DATE_1"
 			],
@@ -19,7 +27,7 @@
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 456,
+				"buffer_size": 457,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -28,7 +36,7 @@
 			"file": "lib/handler.js",
 			"settings":
 			{
-				"buffer_size": 432,
+				"buffer_size": 107,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -37,7 +45,25 @@
 			"file": "lib/renderer.js",
 			"settings":
 			{
-				"buffer_size": 637,
+				"buffer_size": 991,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/compiler.js",
+			"settings":
+			{
+				"buffer_size": 224,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "roadmap.txt",
+			"settings":
+			{
+				"buffer_size": 192,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -46,7 +72,7 @@
 			"file": "test/index.nhp",
 			"settings":
 			{
-				"buffer_size": 600,
+				"buffer_size": 838,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -94,6 +120,11 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Dodovi/Desktop/nhp/test.js",
+		"/C/Users/Dodovi/Desktop/nhp/test/test.nhp",
+		"/C/Users/Dodovi/AppData/Roaming/Sublime Text 3/Packages/User/NHP.sublime-syntax",
+		"/C/Users/Dodovi/Desktop/nhp/NHP.sublime-syntax",
+		"/C/Users/Dodovi/Desktop/nhp/test/index.nhp",
 		"/C/Users/Dodovi/Desktop/nhp/package.json",
 		"/C/Users/Dodovi/Desktop/nhp/index.ntl",
 		"/C/Users/Dodovi/Downloads/index.nhp",
@@ -109,7 +140,7 @@
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -120,9 +151,19 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"\\n",
+			"'",
+			"\\",
+			"template",
+			"'",
+			"\\n",
+			"'",
+			"`",
+			"script",
+			"__TEMPLATE__",
 			"template",
 			"cookieScript",
 			"cookieScriptReadCookie",
@@ -139,9 +180,17 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\\\n",
+			"\\'",
+			"\\\\",
+			"tpl",
+			"\\\\'",
+			"\\'",
+			"\\\\n",
+			"\\n",
 			"",
 			"document",
 			"$",
@@ -156,7 +205,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -165,15 +214,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 456,
+						"buffer_size": 457,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								364,
-								364
+								33,
+								33
 							]
 						],
 						"settings":
@@ -184,7 +233,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -193,15 +242,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 432,
+						"buffer_size": 107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								352,
-								352
+								88,
+								88
 							]
 						],
 						"settings":
@@ -223,15 +272,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 637,
+						"buffer_size": 991,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								637,
-								637
+								836,
+								836
 							]
 						],
 						"settings":
@@ -241,7 +290,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 510.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -249,24 +298,80 @@
 				},
 				{
 					"buffer": 3,
-					"file": "test/index.nhp",
+					"file": "lib/compiler.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 600,
+						"buffer_size": 224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								538,
-								538
+								224,
+								224
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "roadmap.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11,
+								11
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "test/index.nhp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								93
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/NHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -319,7 +424,7 @@
 	"project": "nhp.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 75.0
 	},
 	"save_all_on_build": true,
 	"select_file":

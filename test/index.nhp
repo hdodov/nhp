@@ -1,4 +1,5 @@
 var ms = require('ms');
+var foo = require('./foo');
 
 <!DOCTYPE html>
 <html>
@@ -7,17 +8,25 @@ var ms = require('ms');
 </head>
 <body>
     <div>
-        var prom = new Promise((resolve, reject) => {
-            setTimeout(function () {
-                resolve('working');
-            }, 500);
+        // var prom = new Promise((resolve, reject) => {
+        //     setTimeout(function () {
+        //         resolve('working');
+        //     }, 500);
+        // });
+
+        echo(arguments.query.test);
+
+
+        await include('./mods/md.nhp', {
+            wait: 150
+        }).then((module) => {
+            <h1>${ module.buffer }</h1>
+        }).catch(() => {
+            <h1>Could not load md.nhp</h1>
         });
 
-        buffer += 'test';
-
-        <h1>${ await prom } ${ ms(Math.random() * 10e4) }</h1>
-
-        <h1 class="${ 'test' + 'foo' }">${ path }</h1>
+        <h1>${ ms(Math.random() * 10e4) }</h1>
+        <h2>${ arguments.foo }</h2>
 
         <div>
             <template>
@@ -29,9 +38,11 @@ var ms = require('ms');
 
         <ul>
             for (var i = 0; i < 50; i++) {
-                <li>${i}</li>
+                <li data-index="${i}">${i}</li>
             }
         </ul>
+
+        exports.test = Date.now();
 
         <template>
             for (var i = 0; i < 50; i++) {

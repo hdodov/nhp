@@ -6,10 +6,11 @@ var handler = require('./lib/handler');
 process.env.NHP_ROOT = path.join(__dirname, 'test');
 
 app.get(/\.nhp$/, function (req, res) {
-    handler(req).catch((e) => {
-        return Promise.resolve(e);
+    handler(req).catch((error) => {
+        return Promise.resolve({
+            buffer: error.toString()
+        });
     }).then((data) => {
-        console.log(data);
         res.send(data.buffer);
     });
 })
