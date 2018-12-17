@@ -1,12 +1,1 @@
-var foo = require('../foo');
-var tet = require('./tet.json');
-
-<pre>${ tet.test }</pre>
-
-await new Promise((resolve, reject) => {
-    setTimeout(function () {
-        resolve();
-    }, arguments.wait);
-});
-
-<h1>Waited ${ arguments.wait } milliseconds: ${ foo('test') }</h1>
+<h1>FOOBER</h1>

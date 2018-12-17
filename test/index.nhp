@@ -14,8 +14,6 @@ var foo = require('./foo');
         //     }, 500);
         // });
 
-        <h1>stara</h1>
-
         var cnt = capture(() => {
             <h1>${ arguments.query.test }</h1>
         });
@@ -27,13 +25,15 @@ var foo = require('./foo');
         </pre>
 
 
-        await include('./mods/md.nhp', {
-            wait: 150
-        }).then((module) => {
-            <h1>${ module.buffer }</h1>
-        }).catch(() => {
-            <h1>Could not load md.nhp</h1>
+        var data = await include('./mods/md.nhp', {
+            div: capture(() => {
+                <div style="background: blue;">
+                    <p>captured: ${ 5 + 5 }</p>
+                </div>
+            }).replace(/\</g, '&lt;').replace(/\>/g, '&gt;')
         });
+
+        <pre>${ JSON.stringify(data) }</pre>
 
         <h1>${ ms(Math.random() * 10e4) }</h1>
         <h2>${ arguments.foo }</h2>
