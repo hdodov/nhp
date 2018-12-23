@@ -1,5 +1,13 @@
 <h1>FOOBER</h1>
+<echo>
+    ${ arguments.div }
+</echo>
 
-setTimeout(function () {
-    <h1>test</h1>
-}, 150);
+await new Promise ((resolve, reject) => {
+    setTimeout(function () {
+        <h1>test</h1>
+        resolve();
+    }, 150);
+});
+
+exports.mode = 'test';

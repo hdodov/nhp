@@ -9,14 +9,22 @@ contexts:
     - match: ""
       push: "Packages/JavaScript/JavaScript.sublime-syntax"
       with_prototype: 
-        - match: "^\\s*(?=<template>)"
-          push: template
+        - match: "^\\s*(?=<echo(?:\\b|>))"
+          push: "Packages/HTML/HTML.sublime-syntax"
+          with_prototype:
+            - include: template-expression
+            - match: "(?<=</echo>)"
+              pop: true
         - match: "^\\s*(?=<)"
-          embed: "Packages/HTML/HTML.sublime-syntax"
-          escape: $
+          push: "Packages/HTML/HTML.sublime-syntax"
+          with_prototype:
+            - include: template-expression
+            - match: "(?<=>)\\s*$"
+              pop: true
 
-  template:
-    - meta_content_scope: text.nhp.basic
-    - match: "(?<=<\\/template>)"
-      pop: true
-    - include: "Packages/HTML/HTML.sublime-syntax"
+  template-expression:
+    - match: "(?<!\\\\)(?:\\\\{2})*\\${"
+      push: "Packages/JavaScript/JavaScript.sublime-syntax"
+      with_prototype:
+      - match: "(?=})"
+        pop: true

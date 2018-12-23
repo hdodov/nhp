@@ -1,2 +1,4 @@
 - add type="plain" to <template> for plaintext
 - improve compiler to properly escape all characters
+- turn this into a module that can be installed in a project
+- use this as a module in a project
