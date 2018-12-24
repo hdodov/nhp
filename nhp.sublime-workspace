@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"lit",
+				"literal-start\tcontext"
+			],
+			[
 				"meta",
 				"meta_content_scope\tmeta_content_scope:"
 			],
@@ -24,13 +28,11 @@
 	"buffers":
 	[
 		{
-			"contents": "var express = require('express');\nvar app = express();\nvar path = require('path');\nvar handler = require('./lib/handler');\n\nprocess.env.NHP_ROOT = path.join(__dirname, 'test');\nprocess.env.NHP_CACHE = false;\n\nfsd`test ${ `test asdfsdf etest \\${ggsd} st`}`\n\napp.get(/\\.nhp$/, function (req, res) {\n    handler(req).catch((error) => {\n        return Promise.resolve({\n            buffer: error.toString()\n        });\n    }).then((data) => {\n        res.send(data.buffer);\n    });\n})\n\napp.listen(8080, function () {\n    console.log('Listening on port 8080');\n});\n",
 			"file": "index.js",
-			"file_size": 533,
-			"file_write_time": 131894467217594527,
 			"settings":
 			{
-				"buffer_size": 560,
+				"buffer_size": 512,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -53,20 +55,19 @@
 			}
 		},
 		{
-			"file": "roadmap.txt",
+			"file": "lib/compiler.js",
 			"settings":
 			{
-				"buffer_size": 196,
+				"buffer_size": 224,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "lib/compiler.js",
+			"file": "lib/compiler/test.nhp",
 			"settings":
 			{
-				"buffer_size": 216,
-				"encoding": "UTF-8",
+				"buffer_size": 11,
 				"line_ending": "Windows"
 			}
 		},
@@ -74,16 +75,16 @@
 			"file": "test/index.nhp",
 			"settings":
 			{
-				"buffer_size": 1389,
+				"buffer_size": 1364,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "lib/compiler/parser.js",
+			"file": "test/mods/md.nhp",
 			"settings":
 			{
-				"buffer_size": 458,
+				"buffer_size": 207,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -130,14 +131,18 @@
 		"/C/Users/Dodovi/Desktop/nhp/lib/compiler",
 		"/C/Users/Dodovi/Desktop/nhp/test",
 		"/C/Users/Dodovi/Desktop/nhp/test/mods",
-		"/C/Users/Dodovi/AppData/Roaming/Sublime Text 3/Packages/User"
+		"/C/Users/Dodovi/AppData/Roaming/Sublime Text 3/Packages/User",
+		"/C/Users/Dodovi/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.cache"
 	],
 	"file_history":
 	[
+		"/C/Users/Dodovi/Desktop/nhp/lib/compiler/parser.js",
+		"/C/Users/Dodovi/Desktop/nhp/NHP.sublime-syntax",
+		"/C/Users/Dodovi/AppData/Roaming/Sublime Text 3/Packages/User/NHP.sublime-syntax",
+		"/C/Users/Dodovi/Desktop/nhp/roadmap.txt",
 		"/C/Users/Dodovi/Desktop/nhp/test/test.nhp",
 		"/C/Users/Dodovi/Desktop/nhp/test/mods/md.nhp",
 		"/C/Users/Dodovi/Desktop/nhp/lib/compiler/test.nhp",
-		"/C/Users/Dodovi/AppData/Roaming/Sublime Text 3/Packages/User/NHP.sublime-syntax",
 		"/C/Users/Dodovi/Desktop/index.html",
 		"/C/Users/Dodovi/Desktop/nhp/README.md",
 		"/C/Users/Dodovi/Desktop/nhp/lib/compiler.js",
@@ -145,10 +150,8 @@
 		"/C/Users/Dodovi/Desktop/nhp/test/mods/tet.json",
 		"/C/Users/Dodovi/Desktop/nhp/test/foo.js",
 		"/C/Users/Dodovi/Desktop/nhp/test/index.nhp",
-		"/C/Users/Dodovi/Desktop/nhp/roadmap.txt",
 		"/C/Users/Dodovi/Desktop/nhp/test.js",
 		"/C/Users/Dodovi/Desktop/nhp/test/md.nhp",
-		"/C/Users/Dodovi/Desktop/nhp/NHP.sublime-syntax",
 		"/C/Users/Dodovi/Desktop/nhp/package.json",
 		"/C/Users/Dodovi/Desktop/nhp/index.ntl",
 		"/C/Users/Dodovi/Downloads/index.nhp",
@@ -177,6 +180,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"template",
+			"check-template",
+			"literal",
+			"literal-start",
+			"template",
+			"echo",
 			"template",
 			"});",
 			"template",
@@ -243,7 +252,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -252,15 +261,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 560,
+						"buffer_size": 512,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								207,
-								207
+								208,
+								208
 							]
 						],
 						"settings":
@@ -271,7 +280,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -331,52 +340,24 @@
 						"translation.y": 80.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "roadmap.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 196,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								196,
-								196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "lib/compiler.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 216,
+						"buffer_size": 224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								169,
-								148
+								224,
+								224
 							]
 						],
 						"settings":
@@ -391,20 +372,48 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "test/index.nhp",
-					"semi_transient": false,
+					"buffer": 4,
+					"file": "lib/compiler/test.nhp",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1389,
+						"buffer_size": 11,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								51,
-								51
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/NHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "test/index.nhp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								990,
+								990
 							]
 						],
 						"settings":
@@ -414,38 +423,38 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 400.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "lib/compiler/parser.js",
+					"file": "test/mods/md.nhp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 458,
+						"buffer_size": 207,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								151,
-								151
+								44,
+								44
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/User/NHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

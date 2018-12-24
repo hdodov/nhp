@@ -23,7 +23,7 @@ contexts:
               pop: true
 
   template-expression:
-    - match: "(?<!\\\\)(?:\\\\{2})*\\${"
+    - match: "(?<=\\${)(?!})"
       push: "Packages/JavaScript/JavaScript.sublime-syntax"
       with_prototype:
       - match: "(?=})"
