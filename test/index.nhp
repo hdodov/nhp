@@ -60,5 +60,9 @@ var foo = require('./foo');
             }
         </echo>
     </div>
+
+    <pre style="background-color: #eee">
+        echo(__render.toString().replace(/\</g, '&lt;').replace(/\>/g, '&gt;'));
+    </pre>
 </body>
 </html>
