@@ -73,7 +73,9 @@ var escape = require('escape-html');
     </div>
 
     <pre style="background-color: #eee">
-        echo(__render.toString().replace(/\</g, '&lt;').replace(/\>/g, '&gt;'));
+        echo(__render.toString(), {
+            escape: true
+        });
     </pre>
 </body>
 </html>
