@@ -19,7 +19,7 @@ var foo = require('./foo');
         });
 
         <pre>
-            <echo>
+            <echo plain>
                 ${ cnt.toUpperCase() }
             </echo>
         </pre>
