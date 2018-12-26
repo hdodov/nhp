@@ -1,2 +1,0 @@
-- turn this into a module that can be installed in a project
-- use this as a module in a project

@@ -1,21 +1,22 @@
-var express = require('express');
-var app = express();
 var path = require('path');
-var handler = require('./lib/handler');
+var config = require('./lib/config');
+var Renderer = require('./lib/renderer');
 
-process.env.NHP_ROOT = path.join(__dirname, 'test');
-process.env.NHP_CACHE = false;
+exports.expressHandler = function (req, res) {
+    var file = path.join(config.root, req.path);
+    var renderer = new Renderer(file, req);
 
-app.get(/\.nhp$/, function (req, res) {
-    handler(req).catch((error) => {
+    return renderer.render().catch((error) => {
         return Promise.resolve({
             buffer: error.toString()
         });
     }).then((data) => {
         res.send(data.buffer);
     });
-})
+};
 
-app.listen(8080, function () {
-    console.log('Listening on port 8080');
-});
+exports.config = function (settings) {
+    for (var k in settings) {
+        config[k] = settings[k];
+    }
+};
