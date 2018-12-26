@@ -1,5 +1,6 @@
 var ms = require('ms');
 var foo = require('./foo');
+var escape = require('escape-html');
 
 <!DOCTYPE html>
 <html>
@@ -14,23 +15,33 @@ var foo = require('./foo');
         //     }, 500);
         // });
 
+        <h1>${ escape('&<hello>') }</h1>
+
         var cnt = capture(() => {
             <h1>${ arguments.query.test }</h1>
         });
 
-        <pre>
-            <echo plain>
-                ${ cnt.toUpperCase() }
-            </echo>
-        </pre>
+        <echo plain strip>
+            <pre>
+                `"\${ cnt.toUpperCase() }"`"
+            </pre>
+
+            <div>
+                <p>
+                    <span>test</span>
+                </p>
+            </div>
+        </echo>
 
 
         var data = await include('./mods/md.nhp', {
             div: capture(() => {
-                <div style="background: blue;">
-                    <p>captured: ${ 5 + 5 }</p>
-                </div>
-            }).replace(/\</g, '&lt;').replace(/\>/g, '&gt;')
+                <echo escape>
+                    <div style="background: blue;">
+                        <p>captured: ${ 5 + 5 }</p>
+                    </div>
+                </echo>
+            })
         });
 
         <pre>${ JSON.stringify(data) }</pre>

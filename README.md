@@ -4,9 +4,9 @@
 1. `<template>` and `</template>` mark the start and end of markup, respectively. Options specified as attributes with no values (`<template option1 option2>` for example) can be applied to alter the behavior:
 
 - `plain` the markup is parsed as a plain string, meaning that it will be compiled with quotes `"` instead of backticks `` ` ``
+- `trim` remove starting and ending whitespace
+- `strip` same as `trim` but also removes whitespace between tags
 - `escape` HTML special characters are escaped
-- `strip` removes starting and ending whitespace and whitespace between tags
-- `return` denotes that the markup should not be added to the buffer, but instead returned for use in an expression
 
 2. To avoid numerous repetitions of `<template>` tags, each new line starting with `<` marks the beginning of markup. The next line to have `>` will mark the end of markup. **Note:** The `>` symbol marks on which _line_ the markup ends, meaning that the whole line is added, regardless of where the symbol appears. For example:
 

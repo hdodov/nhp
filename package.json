@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/hdodov/nhp#readme",
   "dependencies": {
+    "escape-html": "^1.0.3",
     "express": "^4.16.4",
     "ms": "^2.1.1"
   },
