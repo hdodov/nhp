@@ -1,6 +1,7 @@
 # NHP
 
-Stands for Node Hypertext Preprocessor and is a templating engine for Node.js. It's inspired by PHP but does things the Node way.
+Stands for Node Hypertext Preprocessor and is a templating engine for Node.js.
+It's inspired by PHP but does things the Node way.
 
 ## Syntax
 
@@ -10,30 +11,30 @@ In NHP, things are flipped and the default context is the programming one (JavaS
 
 1. Any line that begins with `<`, ignoring preceding whitespace, marks the start of the markup context. A line that ends with `>`, ignoring trailing whitespace, marks the end of the markup context.
 
-```
-if (cond() === true) {
-    <h1>Hey, the condition is true</h1>
-} 
-```
+    ```
+    if (cond() === true) {
+        <h1>Hey, the condition is true</h1>
+    } 
+    ```
 
-In the above code, the second line is considered markup and is added to the template buffer (the rendered markup).
+    In the above code, the second line is considered markup and is added to the template buffer (the rendered markup).
 
 2. To explicitly switch to the markup context (in multiline output, for example), you use the special `<echo>` tag:
 
-```
-if (true) {
-    <echo>
-        <p>
-            multiline
-            content
-        </p>
-    </echo> // js comment
-}
-```
+    ```
+    if (true) {
+        <echo>
+            <p>
+                multiline
+                content
+            </p>
+        </echo> // js comment
+    }
+    ```
 
-The echo tag partly follows the first rule, meaning that its opening `<` must be the first symbol of the line. The reason for that is simplicity - if a line starts with `<`, you always know that the following is markup. However, unlike implicit markup, the echo context ends where the `</echo>` tag appears, regardless of where in the line it is. The following is always JavaScript, hence the "js comment" above.
+    The echo tag partly follows the first rule, meaning that its opening `<` must be the first symbol of the line. The reason for that is simplicity - if a line starts with `<`, you always know that the following is markup. However, unlike implicit markup, the echo context ends where the `</echo>` tag appears, regardless of where in the line it is. The following is always JavaScript, hence the "js comment" above.
 
-If you use Sublime Text, you can install the [NHP syntax highlighting plugin](http://example.com/) and you'll get used to it pretty quick.
+    If you use Sublime Text, you can install the [NHP syntax highlighting plugin](#) and you'll get used to it pretty quick.
 
 ## Features
 
@@ -179,14 +180,14 @@ Output:
 <pre>This is JSON!</pre>
 ```
 
-# Getting started
+## Getting started
 
-- Read the [Getting Started](#) document for a quick and easy guide to set up NHP.
+- Read the [Getting Started](USAGE.md) document for a quick and easy guide to set up NHP.
 - If you use Sublime Text, you should install [the syntax highlighting plugin for NHP].
 - Finally, you might want to read the [API Reference](#) for a deeper explanation of the features.
 
 **WARNING:** This is experimental technology and use in production for serious projects is **not** recommended at this point.
 
-# License
+### License
 
 GPL-3.0
