@@ -120,10 +120,73 @@ Output:
 <p>Markup continues...</p>
 ```
 
-### Include
+### Including templates
 
-Include, exports, arguments
+In an NHP template, you can use the `include()` function to render another template in the current one. You can also pass data to the included template that can be accessed via the `arguments` variable. That template, on the other hand, can export some data back to the including template:
 
-### Require
+parent.nhp:
+```
+var child = await include('./child.nhp', {
+    name: 'John'
+});
 
-NPM modules, local modules, JSON
+<h1>Value: ${ child.value }</h1>
+```
+
+child.nhp:
+```
+<p>${ arguments.name.toUpperCase() }</p>
+exports.value = 42;
+```
+
+Output:
+
+```html
+<p>JOHN</p>
+<h1>Value: 42</h1>
+```
+
+**Note:** We use `await` to make sure that the execution of the parent template continues only after the child has resolved. That's because (as mentioned above) each template is rendered by an async function. If we omit the `await` keyword, we would get a warning in the console and the following output:
+
+```html
+<h1>Value: undefined</h1>
+```
+
+### Requiring modules
+
+Templates can use the `require()` function like any Node.js module to get access to other modules. This means we can use _all packages in the NPM registry_, as well as our own modules:
+
+```
+var ms = require('ms');
+var data = require('./data.json');
+
+<h1>${ ms(Math.random() * 10e4) }</h1>
+<pre>${ data.text }</pre>
+```
+
+In this example, we use the [ms](https://www.npmjs.com/package/ms) utility and we also require a local JSON file that looks like this:
+
+```json
+{
+    "text": "This is JSON!"
+}
+```
+
+Output:
+
+```
+<h1>43s</h1>
+<pre>This is JSON!</pre>
+```
+
+# Getting started
+
+- Read the [Getting Started](#) document for a quick and easy guide to set up NHP.
+- If you use Sublime Text, you should install [the syntax highlighting plugin for NHP].
+- Finally, you might want to read the [API Reference](#) for a deeper explanation of the features.
+
+**WARNING:** This is experimental technology and use in production for serious projects is **not** recommended at this point.
+
+# License
+
+GPL-3.0
