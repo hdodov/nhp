@@ -186,8 +186,6 @@ Output:
 - If you use Sublime Text, you should install [the syntax highlighting plugin for NHP].
 - Finally, you might want to read the [API Reference](#) for a deeper explanation of the features.
 
-**WARNING:** This is experimental technology and use in production for serious projects is **not** recommended at this point.
+## WARNING
 
-### License
-
-GPL-3.0
+This is experimental technology and use in production for serious projects is **not** recommended at this point.
