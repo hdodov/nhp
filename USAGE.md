@@ -17,6 +17,7 @@ npm install nhp --save
 or `cd` in your project root and run:
 
 ```
+git init
 git submodule add https://github.com/hdodov/nhp
 ```
 
