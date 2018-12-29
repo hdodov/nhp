@@ -1,4 +1,5 @@
 var path = require('path');
+var escape = require('escape-html');
 var config = require('./lib/config');
 var Renderer = require('./lib/renderer');
 
@@ -8,7 +9,7 @@ exports.expressHandler = function (req, res) {
 
     return renderer.render().catch((error) => {
         return Promise.resolve({
-            buffer: error.toString()
+            buffer: `<pre>${ escape(error.stack || error) }</pre>`
         });
     }).then((data) => {
         res.send(data.buffer);
