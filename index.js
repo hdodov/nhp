@@ -1,6 +1,10 @@
 var config = require('./lib/config');
 var Renderer = require('./lib/renderer');
 
+exports.handlers = {
+    express: require('./handlers/express')
+};
+
 exports.__express = function (file, options, callback) {
     var renderer = new Renderer(file, options);
 
