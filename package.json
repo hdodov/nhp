@@ -1,7 +1,7 @@
 {
-  "name": "nhp",
-  "version": "0.1.0",
-  "description": "Node Hypertext Preprocessor",
+  "name": "nhpjs",
+  "version": "0.2.0",
+  "description": "Templating engine for Node.js with support for Express that does things the Node way.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,18 +13,21 @@
   "keywords": [
     "node",
     "hypertext",
-    "preprocessor"
+    "preprocessor",
+    "template",
+    "engine",
+    "php",
+    "express",
+    "render",
+    "server"
   ],
   "author": "Hristiyan Dodov",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/hdodov/nhp/issues"
   },
-  "homepage": "https://github.com/hdodov/nhp#readme",
+  "homepage": "https://nhpjs.com/",
   "dependencies": {
     "escape-html": "^1.0.3"
-  },
-  "devDependencies": {
-    "chalk": "^2.4.1"
   }
 }
