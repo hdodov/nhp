@@ -1,7 +1,7 @@
 {
   "name": "nhpjs",
-  "version": "0.2.0",
-  "description": "Templating engine for Node.js with support for Express that does things the Node way.",
+  "version": "0.2.1",
+  "description": "Template engine for Node.js doing things the Node way, with support for Express.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,8 @@
     "php",
     "express",
     "render",
-    "server"
+    "server",
+    "routing"
   ],
   "author": "Hristiyan Dodov",
   "license": "GPL-3.0-or-later",

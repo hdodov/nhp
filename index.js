@@ -17,4 +17,6 @@ exports.config = function (settings) {
     for (var k in settings) {
         config[k] = settings[k];
     }
+
+    return exports;
 };
